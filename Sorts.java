@@ -7,18 +7,16 @@ public class Sorts {
     System.out.println(toString(ary));
   }
   public static void selectionsort(int[] ary) {
-    int currSmall = ary[0];
-    int idxSwitch = 0;
-    for (int i = 0; i < ary.length; i++) {
-      for (int i2 = i; i2 < ary.length; i2++) {
+    for (int i = 0; i < ary.length - 1; i++) {
+      int currSmall = i;
+      for (int i2 = i + 1; i2 < ary.length; i2++) {
         if (currSmall > ary[i2]) {
-          currSmall = ary[i2];
-          idxSwitch = i2;
+          currSmall = i2;
         }
       }
-      int switcher = ary[i];
-      ary[i] = currSmall;
-      ary[idxSwitch] = switcher;
+      int switcher = ary[currSmall];
+      ary[currSmall] = ary[i];
+      ary[i] = switcher;
     }
   }
   public static String toString(int[] ary) {
