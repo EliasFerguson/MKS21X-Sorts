@@ -1,9 +1,10 @@
 public class Sorts {
+  private int[] data;
   public static void main(String[] args) {
     int[] ary = new int[]{1, 4, 6, 2, 4, 7, 5, 8, 1000, 0};
-    System.out.println(ary);
+    System.out.println(ary.toString());
     selectionsort(ary);
-    System.out.println(ary);
+    System.out.println(ary.toString());
   }
   public static void selectionsort(int[] ary) {
     int currSmall = ary[0];
@@ -20,7 +21,13 @@ public class Sorts {
       ary[idxSwitch] = switcher;
     }
   }
-  public void toString() {
-    
+  public String toString(int[] ary) {
+    String output = "[";
+    for (int i = 0; i < ary.length - 1; i++) {
+      output += ary[i] + ", ";
+    }
+    output += ary[ary.length] + "]";
+    return output;
   }
+
 }
