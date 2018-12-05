@@ -10,7 +10,7 @@ public class Sorts {
     for (int i = 0; i < ary.length - 1; i++) {
       int currSmall = i;
       for (int i2 = i + 1; i2 < ary.length; i2++) {
-        if (currSmall > ary[i2]) {
+        if (ary[currSmall] > ary[i2]) {
           currSmall = i2;
         }
       }
