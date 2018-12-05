@@ -20,4 +20,7 @@ public class Sorts {
       ary[idxSwitch] = switcher;
     }
   }
+  public void toString() {
+    
+  }
 }
