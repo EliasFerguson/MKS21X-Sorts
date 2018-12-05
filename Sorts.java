@@ -11,6 +11,11 @@ public class Sorts {
     selectionSort(ary);
     System.out.println(toString(ary));
   }
+  /*
+     Selection Sort uses n^2 time. It looks at the array one element at a time and 
+     switches the current number with the smallest remaining number. This eventually
+     results in an ordered list.
+  */
   public static void selectionSort(int[] ary) {
     for (int i = 0; i < ary.length - 1; i++) {
       int currSmall = i;
@@ -32,5 +37,4 @@ public class Sorts {
     output += ary[ary.length - 1] + "]";
     return output;
   }
-
 }
