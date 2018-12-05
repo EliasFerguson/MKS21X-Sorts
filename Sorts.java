@@ -12,12 +12,12 @@ public class Sorts {
     System.out.println(toString(ary));
   }
   /*
-     Selection Sort uses n^2 time. It looks at the array one element at a time and 
+     Selection Sort uses n^2 time. It looks at the array one element at a time and
      switches the current number with the smallest remaining number. This eventually
      results in an ordered list.
   */
   public static void selectionSort(int[] ary) {
-    for (int i = 0; i < ary.length - 1; i++) {
+    for (int i = 0; i < ary.length; i++) {
       int currSmall = i;
       for (int i2 = i + 1; i2 < ary.length; i2++) {
         if (ary[currSmall] > ary[i2]) {
