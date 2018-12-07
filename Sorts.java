@@ -1,15 +1,17 @@
 import java.util.*;
+import java.io.*;
 public class Sorts {
   private int[] data;
   public static void main(String[] args) {
-    int[] ary = new int[10];
+    int input = Integer.parseInt(args[0]);
+    int[] ary = new int[input];
     Random randgen = new Random();
-    for (int i = 0; i < 10; i++) {
-      ary[i] = (randgen.nextInt() % 100);
+    for (int i = 0; i < input; i++) {
+      ary[i] = (randgen.nextInt());
     }
-    System.out.println(toString(ary));
+    //System.out.println(toString(ary));
     selectionSort(ary);
-    System.out.println(toString(ary));
+    //System.out.println(toString(ary));
   }
   /*
      Selection Sort uses n^2 time. It looks at the array one element at a time and
