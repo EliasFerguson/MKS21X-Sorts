@@ -31,6 +31,15 @@ public class Sorts {
       ary[i] = switcher;
     }
   }
+  public static void bubbleSort(int[] ary) {
+    for (int i = 0; i < ary.length - 1; i++) {
+      if (ary[i] > ary[i + 1]) {
+        int switcher = ary[i];
+        ary[i] = ary[i + 1];
+        ary[i + 1] = switcher;
+      }
+    }
+  }
   public static String toString(int[] ary) {
     String output = "[";
     for (int i = 0; i < ary.length - 1; i++) {
