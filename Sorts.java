@@ -7,11 +7,12 @@ public class Sorts {
     int[] ary = new int[input];
     Random randgen = new Random();
     for (int i = 0; i < input; i++) {
-      ary[i] = (randgen.nextInt() % 10);
+      ary[i] = (randgen.nextInt());
     }
-    System.out.println(toString(ary));
-    bubbleSort(ary);
-    System.out.println(toString(ary));
+    //System.out.println(toString(ary));
+    //bubbleSort(ary);
+    //selectionSort(ary);
+    //System.out.println(toString(ary));
   }
   /*
      Selection Sort uses n^2 time. It looks at the array one element at a time and
