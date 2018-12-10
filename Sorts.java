@@ -43,6 +43,9 @@ public class Sorts {
       }
     }
   }
+  public static void insertionSort(int[] ary) {
+    
+  }
   public static String toString(int[] ary) {
     String output = "[";
     for (int i = 0; i < ary.length - 1; i++) {
