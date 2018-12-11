@@ -44,7 +44,22 @@ public class Sorts {
     }
   }
   public static void insertionSort(int[] ary) {
-    
+    int switcher;
+    int temp;
+    for (int i = 1; i < ary.length; i++) {
+      if (ary[i] < ary[i - 1]) {
+        switcher = ary[i];
+        for (int i2 = i; i2 > 0; i2--) {
+          if (switcher > ary[i2 - 1]) {
+            ary[i2] = switcher;
+          }
+          else {
+            temp = ary[i2];
+            ary[i2 + 1] = temp;
+          }
+        }
+      }
+    }
   }
   public static String toString(int[] ary) {
     String output = "[";
