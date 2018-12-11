@@ -54,8 +54,8 @@ public class Sorts {
             ary[i2] = switcher;
           }
           else {
-            temp = ary[i2];
-            ary[i2 + 1] = temp;
+            temp = ary[i2 - 1];
+            ary[i2] = temp;
           }
         }
       }
