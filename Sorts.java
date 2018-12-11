@@ -13,7 +13,7 @@ public class Sorts {
     //bubbleSort(ary);
     insertionSort(ary);
     //selectionSort(ary);
-    //System.out.println(toString(ary));
+    System.out.println(toString(ary));
   }
   /*
      Selection Sort uses n^2 time. It looks at the array one element at a time and
@@ -48,16 +48,12 @@ public class Sorts {
     int switcher;
     for (int i = 1; i < ary.length; i++) {
       switcher = ary[i];
-      for (int i2 = i; i2 > 0; i2--) {
-        System.out.println(switcher);
-        System.out.println(toString(ary));
-        if (switcher < ary[i2 - 1]) {
-          ary[i2] = ary[i2 - 1];
-        }
-        else {
-          ary[i2] = switcher;
-        }
+      int i2 = i;
+      while ((i2 > 0) && (switcher < ary[i2 - 1])) {
+        ary[i2] = ary[i2 - 1];
+        i2--;
       }
+      ary[i2] = switcher;
     }
   }
   public static String toString(int[] ary) {
